@@ -7,6 +7,7 @@ vim.keymap.set('n', '<C-Left>', ':vertical resize -5<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +5<CR>', opts)
 vim.keymap.set('n', '<C-Up>', ':wincmd = <CR>', opts)
 vim.keymap.set('n', '<C-Down>', ':vertical resize +90<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-r>', ':w<CR>:!python %<CR>', opts)
 
 vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Function to move selected lines down
