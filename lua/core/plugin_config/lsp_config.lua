@@ -3,7 +3,7 @@ vim.lsp.set_log_level("off")
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"lua_ls", "pyright", "clangd"}
+  ensure_installed = {"lua_ls", "pylsp", "ruff_lsp", "ruff", "clangd"}
 })
 
 local on_attach = function(_, _)
@@ -18,7 +18,7 @@ end
 
 require("lspconfig").lua_ls.setup{on_attach = on_attach}
 require("lspconfig").clangd.setup{on_attach = on_attach}
-require("lspconfig").pyright.setup{
+require("lspconfig").pylsp.setup{
   on_attach = on_attach,
   settings = {
     python = {
@@ -26,3 +26,5 @@ require("lspconfig").pyright.setup{
     }
   }
 }
+require("lspconfig").ruff_lsp.setup{on_attach = on_attach}
+require("lspconfig").ruff.setup{on_attach = on_attach}
