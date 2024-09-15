@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("off")
+vim.lsp.set_log_level("error")
 --vim.lsp.log.set_path(vim.fn.stdpath('cache') .. '/lsp.log')
 
 require("mason").setup()
@@ -16,8 +16,20 @@ local on_attach = function(_, _)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
 end
 
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = on_attach
+  },
+})
+
 require("lspconfig").lua_ls.setup{on_attach = on_attach}
 require("lspconfig").clangd.setup{on_attach = on_attach}
+require("lspconfig").ruff_lsp.setup{on_attach = on_attach}
+require("lspconfig").ruff.setup{on_attach = on_attach}
+require("lspconfig").html.setup{on_attach = on_attach}
+require("lspconfig").cssls.setup{on_attach = on_attach}
 require("lspconfig").pylsp.setup{
   on_attach = on_attach,
   settings = {
@@ -26,5 +38,4 @@ require("lspconfig").pylsp.setup{
     }
   }
 }
-require("lspconfig").ruff_lsp.setup{on_attach = on_attach}
-require("lspconfig").ruff.setup{on_attach = on_attach}
+
