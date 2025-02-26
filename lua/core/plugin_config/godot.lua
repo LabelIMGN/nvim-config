@@ -64,6 +64,6 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = {"project.godot", "*.gd", "*.tscn", "*.tres", "*.import"},
   callback = function()
     vim.bo.filetype = "gdscript"
-    print("Godot file detected")
+    -- print("Godot file detected")
   end
 })

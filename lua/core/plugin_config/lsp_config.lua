@@ -3,7 +3,7 @@ vim.lsp.set_log_level("error")
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"lua_ls", "pylsp","pyright", "ruff", "clangd", "gdscript"}
+  ensure_installed = {"lua_ls", "pylsp","pyright", "ruff", "clangd"}
 })
 
 local on_attach = function(_, _)
