@@ -90,33 +90,6 @@ This is a customized Neovim setup with support for multiple languages including 
 | `<C-e>` | Insert | Close completion menu |
 | `<CR>` | Insert | Confirm completion |
 
-## Potential Keybinding Conflicts
-
-There are a few potential keybinding conflicts in your configuration:
-
-1. **`<C-p>`** is used for both:
-   - Finding files with Telescope (normal mode)
-   - Selecting previous item in completion menu (insert mode)
-   
-   Since these are in different modes, they won't directly conflict but may be confusing.
-
-2. **`<Leader>h`** is used for both:
-   - Clearing search highlighting (global)
-   - Rust hover actions (in Rust files only)
-   
-   This will work as expected since the Rust binding is only active in Rust buffers, but you might consider using a different binding for one of them for consistency.
-
-3. **`<leader>a`** is used for Rust code action group but this is buffer-local so it shouldn't conflict with other mappings.
-
-## Configuration Structure
-
-Your Neovim configuration is organized as follows:
-
-- `init.lua`: Main configuration file
-- `lua/core/keymaps.lua`: Key mappings
-- `lua/core/plugins.lua`: Plugin management with Packer
-- `lua/core/plugin_config/`: Individual plugin configurations
-
 ## Language Server Protocol (LSP)
 
 The configuration includes LSP support for:
