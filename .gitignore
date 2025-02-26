@@ -1,0 +1,20 @@
+# Compiled Lua files
+plugin/packer_compiled.lua
+
+# Logs
+*.log
+
+# Temporary and backup files
+*~
+*.swp
+*.swo
+.netrwhist
+
+# Node.js files
+node_modules/
+
+# System files
+.DS_Store
+
+# Unrelated scripts
+nodesource_setup.sh

@@ -14,7 +14,7 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 
 -- REMAPS
-vim.keymap.set('n', '<C-k>', '<C-w>h', opts)
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 vim.keymap.set('n', '<C-j>', '<C-w>j', opts)

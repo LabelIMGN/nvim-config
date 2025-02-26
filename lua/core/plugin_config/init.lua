@@ -1,3 +1,4 @@
+-- in lua/core/plugin_config/init.lua
 require("core.plugin_config.gruvbox")
 require("core.plugin_config.lualine")
 require("core.plugin_config.nvim-tree")
@@ -8,4 +9,4 @@ require("core.plugin_config.indent-blankline")
 require("core.plugin_config.toggleterm")
 require("core.plugin_config.autopairs")
 require("core.plugin_config.surround")
-
+require("core.plugin_config.rust")
