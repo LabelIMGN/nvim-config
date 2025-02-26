@@ -12,6 +12,8 @@ vim.keymap.set('n', '<C-Down>', ':vertical resize +90<CR>', opts)
 vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Function to move selected lines down
 vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+-- Add to lua/core/keymaps.lua
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, {desc = "Show diagnostics", noremap = true, silent = true})
 
 -- REMAPS
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
