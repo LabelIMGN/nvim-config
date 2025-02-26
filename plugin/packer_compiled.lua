@@ -119,6 +119,16 @@ _G.packer_plugins = {
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["litee-symboltree.nvim"] = {
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/litee-symboltree.nvim",
+    url = "https://github.com/ldelossa/litee-symboltree.nvim"
+  },
+  ["litee.nvim"] = {
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/litee.nvim",
+    url = "https://github.com/ldelossa/litee.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -194,6 +204,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-cmake"] = {
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/vim-cmake",
+    url = "https://github.com/cdelledonne/vim-cmake"
+  },
+  ["vim-godot"] = {
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/vim-godot",
+    url = "https://github.com/habamax/vim-godot"
   },
   ["vim-pencil"] = {
     loaded = true,

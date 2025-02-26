@@ -38,6 +38,14 @@ return require('packer').startup(function(use)
   -- LSP completion source:
   use 'hrsh7th/cmp-nvim-lsp'
 
+  -- GODOT
+  use 'habamax/vim-godot'  -- Enhanced Godot/GDScript support
+  use {
+  'ldelossa/litee.nvim',  -- Creates a VS Code-like panel for project symbols
+  requires = { {'ldelossa/litee-symboltree.nvim'} }
+  }
+  use 'cdelledonne/vim-cmake'  -- For building Godot projects with C#/C++ components
+
   -- Useful completion sources:
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'

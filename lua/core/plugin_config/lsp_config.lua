@@ -3,7 +3,7 @@ vim.lsp.set_log_level("error")
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"lua_ls", "pylsp","pyright", "ruff", "clangd"}
+  ensure_installed = {"lua_ls", "pylsp","pyright", "ruff", "clangd", "gdscript"}
 })
 
 local on_attach = function(_, _)
@@ -30,6 +30,13 @@ require("lspconfig").ruff.setup{on_attach = on_attach}
 require("lspconfig").html.setup{on_attach = on_attach}
 require("lspconfig").cssls.setup{on_attach = on_attach}
 require("lspconfig").asm_lsp.setup{on_attach = on_attach}
+require("lspconfig").gdscript.setup{
+  on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  filetypes = { "gd", "gdscript", "gdscript3" }
+}
 require("lspconfig").pyright.setup{
   on_attach = on_attach,
   settings = {
