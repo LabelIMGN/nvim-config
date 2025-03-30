@@ -37,11 +37,11 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = {"gdscript", "gdscript3", "gd"},
   callback = function()
-    -- 2-space indentation for GDScript
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
-    vim.opt_local.expandtab = true
-    
+    -- 4-space indentation for GDScript
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.expandtab = false
+
     -- Do NOT enable auto-formatting for now, since it's causing errors
     -- We'll add a safer version below
   end

@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup() end}
   use 'kylechui/nvim-surround'
+use { "nvim-neotest/nvim-nio" }
   use 'windwp/nvim-autopairs'
   use 'ellisonleao/gruvbox.nvim'
   use "rebelot/kanagawa.nvim"
@@ -24,7 +25,15 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'preservim/vim-pencil'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'lukas-reineke/indent-blankline.nvim'
+use 'lukas-reineke/indent-blankline.nvim'
+ -- Add these inside your packer startup function
+use 'mfussenegger/nvim-dap'                   -- Debug adapter
+use 'mfussenegger/nvim-dap-python'            -- Python debug adapter
+use 'rcarriga/nvim-dap-ui'                    -- UI for debugging
+use 'jose-elias-alvarez/null-ls.nvim'         -- For linting/formatting
+use 'jose-elias-alvarez/typescript.nvim'      -- TypeScript/React tools
+use 'MunifTanjim/prettier.nvim'               -- Prettier formatter
+use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lukas-reineke/indent-blankline.nvim'
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                            , branch = '0.1.x',
