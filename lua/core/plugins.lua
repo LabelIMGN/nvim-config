@@ -39,7 +39,7 @@ use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lu
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-  use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'}
+  use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', {'neovim/nvim-lspconfig', tag = 'v1.5.0'}}
   use 'simrat39/rust-tools.nvim'
   -- Completion framework:
   use 'hrsh7th/nvim-cmp'
