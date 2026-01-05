@@ -204,6 +204,12 @@ _G.packer_plugins = {
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["obsidian.nvim"] = {
+    config = { "\27LJ\2\n<\0\1\4\0\4\0\a6\1\0\0009\1\1\0019\1\2\0015\3\3\0>\0\2\3B\1\2\1K\0\1\0\1\2\0\0\topen\rjobstart\afn\bvim�\2\1\0\5\0\n\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0004\3\4\0005\4\3\0>\4\1\0035\4\4\0>\4\2\0035\4\5\0>\4\3\3=\3\a\0023\3\b\0=\3\t\2B\0\2\1K\0\1\0\20follow_url_func\0\15workspaces\1\0\2\15workspaces\0\20follow_url_func\0\1\0\2\tname\bBDQ\tpath\18~/Dropbox/BDQ\1\0\2\tname\18Project Gisea\tpath&~/Dropbox/Obsidian/Project_Giseia\1\0\2\tname\20Personnal Vault\tpath'~/Dropbox/Obsidian/Personnal Vault\nsetup\robsidian\frequire\0" },
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -218,6 +224,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["render-markdown.nvim"] = {
+    config = { "\27LJ\2\n�\2\0\0\5\0\17\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\5\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17anti_conceal\1\0\1\fenabled\1\vbullet\1\5\0\0\b●\b○\b◆\b◇\1\0\2\nicons\0\fenabled\2\rcheckbox\1\0\1\fenabled\2\tcode\1\0\2\nstyle\tfull\fenabled\2\fheading\1\0\5\tcode\0\17anti_conceal\0\fheading\0\vbullet\0\rcheckbox\0\nicons\1\a\0\0\n󰲡 \n󰲣 \n󰲥 \n󰲧 \n󰲩 \n󰲫 \1\0\2\nicons\0\fenabled\2\nsetup\20render-markdown\frequire\0" },
+    loaded = true,
+    path = "/Users/imgn-studio/.local/share/nvim/site/pack/packer/start/render-markdown.nvim",
+    url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
@@ -268,6 +280,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: render-markdown.nvim
+time([[Config for render-markdown.nvim]], true)
+try_loadstring("\27LJ\2\n�\2\0\0\5\0\17\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\5\3=\3\14\0025\3\15\0=\3\16\2B\0\2\1K\0\1\0\17anti_conceal\1\0\1\fenabled\1\vbullet\1\5\0\0\b●\b○\b◆\b◇\1\0\2\nicons\0\fenabled\2\rcheckbox\1\0\1\fenabled\2\tcode\1\0\2\nstyle\tfull\fenabled\2\fheading\1\0\5\tcode\0\17anti_conceal\0\fheading\0\vbullet\0\rcheckbox\0\nicons\1\a\0\0\n󰲡 \n󰲣 \n󰲥 \n󰲧 \n󰲩 \n󰲫 \1\0\2\nicons\0\fenabled\2\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+time([[Config for render-markdown.nvim]], false)
+-- Config for: obsidian.nvim
+time([[Config for obsidian.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\1\4\0\4\0\a6\1\0\0009\1\1\0019\1\2\0015\3\3\0>\0\2\3B\1\2\1K\0\1\0\1\2\0\0\topen\rjobstart\afn\bvim�\2\1\0\5\0\n\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0004\3\4\0005\4\3\0>\4\1\0035\4\4\0>\4\2\0035\4\5\0>\4\3\3=\3\a\0023\3\b\0=\3\t\2B\0\2\1K\0\1\0\20follow_url_func\0\15workspaces\1\0\2\15workspaces\0\20follow_url_func\0\1\0\2\tname\bBDQ\tpath\18~/Dropbox/BDQ\1\0\2\tname\18Project Gisea\tpath&~/Dropbox/Obsidian/Project_Giseia\1\0\2\tname\20Personnal Vault\tpath'~/Dropbox/Obsidian/Personnal Vault\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+time([[Config for obsidian.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")

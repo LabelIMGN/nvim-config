@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup() end}
   use 'kylechui/nvim-surround'
-use { "nvim-neotest/nvim-nio" }
+  use { "nvim-neotest/nvim-nio" }
   use 'windwp/nvim-autopairs'
   use 'ellisonleao/gruvbox.nvim'
   use "rebelot/kanagawa.nvim"
@@ -25,15 +25,15 @@ use { "nvim-neotest/nvim-nio" }
   use 'nvim-lualine/lualine.nvim'
   use 'preservim/vim-pencil'
   use 'nvim-treesitter/nvim-treesitter'
-use 'lukas-reineke/indent-blankline.nvim'
- -- Add these inside your packer startup function
-use 'mfussenegger/nvim-dap'                   -- Debug adapter
-use 'mfussenegger/nvim-dap-python'            -- Python debug adapter
-use 'rcarriga/nvim-dap-ui'                    -- UI for debugging
-use 'jose-elias-alvarez/null-ls.nvim'         -- For linting/formatting
-use 'jose-elias-alvarez/typescript.nvim'      -- TypeScript/React tools
-use 'MunifTanjim/prettier.nvim'               -- Prettier formatter
-use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lukas-reineke/indent-blankline.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
+   -- Add these inside your packer startup function
+  use 'mfussenegger/nvim-dap'                   -- Debug adapter
+  use 'mfussenegger/nvim-dap-python'            -- Python debug adapter
+  use 'rcarriga/nvim-dap-ui'                    -- UI for debugging
+  use 'jose-elias-alvarez/null-ls.nvim'         -- For linting/formatting
+  use 'jose-elias-alvarez/typescript.nvim'      -- TypeScript/React tools
+  use 'MunifTanjim/prettier.nvim'               -- Prettier formatter
+  use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lukas-reineke/indent-blankline.nvim'
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.8',
 -- or                            , branch = '0.1.x',
@@ -46,7 +46,64 @@ use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lu
 
   -- LSP completion source:
   use 'hrsh7th/cmp-nvim-lsp'
-
+-- Markdown
+  use {
+    'MeanderingProgrammer/render-markdown.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('render-markdown').setup({
+        -- Headings with different colors and icons
+        heading = {
+          enabled = true,
+          icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
+        },
+        -- Render code blocks nicely
+        code = {
+          enabled = true,
+          style = 'full',
+        },
+        -- Checkboxes
+        checkbox = {
+          enabled = true,
+        },
+        -- Bullet points
+        bullet = {
+          enabled = true,
+          icons = { '●', '○', '◆', '◇' },
+        },
+        -- Conceal current line
+        anti_conceal = {
+          enabled = false,
+        },
+      })
+    end
+  }
+use {
+  'epwalsh/obsidian.nvim',
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require('obsidian').setup({
+      workspaces = {
+        {
+          name = "Personnal Vault",
+          path = "~/Dropbox/Obsidian/Personnal Vault",  -- Your notes directory
+        },
+        {
+          name = "Project Gisea",
+          path = "~/Dropbox/Obsidian/Project_Giseia",
+        },
+        {
+          name = "BDQ",
+          path = "~/Dropbox/BDQ",
+        },
+      },
+      follow_url_func = function(url)
+        --vim.fn.jobstart({"xdg-open", url})  -- Linux
+        vim.fn.jobstart({"open", url})   -- macOS
+      end,
+    })
+  end
+}
   -- GODOT
   use 'habamax/vim-godot'  -- Enhanced Godot/GDScript support
   use {
@@ -58,8 +115,7 @@ use 'pmizio/typescript-tools.nvim'            -- TypeScript code actions use 'lu
   -- Useful completion sources:
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'hrsh7th/cmp-vsnip'
-  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-vsnip' use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/vim-vsnip'
   -- Automatically set up your configuration after cloning packer.nvim
